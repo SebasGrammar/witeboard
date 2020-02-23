@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta name="title" content="Witeboard">
+        <meta name="description" content="A real-time collaboration whiteboard">
+        <meta name="keywords" content="whiteboard, real-time whiteboard, collaboration whiteboard">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+        <meta name="revisit-after" content="1 days">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
         <title>Witeboard</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
     </head>
+
     <body>
+
+        <div class="container">
+            <nav class="options">
+                <!-- will switch between maximize and minimize with animations -->
+                <div class="toggle">
+                    <svg class="toggle__fullscreen toggle__fullscreen--dark-mode" width="20px" height="20px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="exit_fullscreen" transform="translate(-10.000000, -10.000000)" fill="#010101" fill-rule="nonzero"><g id="noun_2816" transform="translate(10.000000, 10.000000)"><polygon id="Shape" points="61.4648 68.5352 72.9296 80 80 72.9296 68.5352 61.4648 80 50 50 50 50 80"></polygon><polygon id="Shape" points="0 72.9296 7.0704 80 18.5352 68.5352 30 80 30 50 0 50 11.4648 61.4648"></polygon><polygon id="Shape" points="0 30 30 30 30 0 18.5352 11.4648 7.1872 0.1072 0.1168 7.1784 11.4648 18.5352"></polygon><polygon id="Shape" points="50 30 80 30 68.5352 18.5352 79.9024 7.1784 72.832 0.1072 61.4648 11.4648 50 0"></polygon></g></g></g>
+                    </svg>
+                </div>
+                <!-- Sharing component involves who's currently active on website and can active sign up form -->
+                <div class="sharing">
+                    <!-- injected by javascript -->
+                    <div class="sharing__person" data-tooltip-active-user="Anonymous Bird"> <!-- A tool tip for descriptions of active users on the website -->
+                        <img src="./images/bird.svg" alt="animal" class="sharing__image"> 
+                    </div>
+                    <button class="sharing__button sharing__button--light-mode">Sharing</button> <!-- Once clicked, will show popup that says, "url has been copied to your clipboard" -->
+                    <button class="sharing__button sharing__button--dark-mode">Sign Up</button> <!-- Once clicked, will pop up a sign up form  -->
+                </div>
+            </nav>
+            <main class="whiteboard whiteboard--dark-mode">
+                <svg class="whiteboard-canvas" width="100%" height="100%"></svg>
+            </main>
+            <nav class="tool">
+
+                <div class="tool__user">
+                    <svg 
+                        width="24"
+                        height="24" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        class="tool__menu tool__menu--open tool__menu--close tool__menu--dark-dark-mode">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                    </svg>
+                    <input type="text" class="tool__name-of-whiteboard tool__name-of-whiteboard--responsive" placeholder="Press &quot;Enter&quot; to save your title">
+                    <!-- placeholder will animate below the input field once user starts typing in the input field  -->
+                </div>
+
+                <div class="tool__for-whiteboard tool__for-whiteboard--dark-mode">
+                    <img src="./images/draw-pencil.svg" alt="pencil icon" class="tool__pencil" data-tooltip-keyboard-shortcut="Pencil (P)">
+                    <img src="./images/straight-line.svg" alt="straight line icon" class="tool__straight-line" data-tooltip-keyboard-shortcut="Line (L)">
+                    <img src="./images/type.svg" alt="text icon" class="tool__text" data-tooltip-keyboard-shortcut="Text (T)">
+                    <img src="./images/eraser.svg" alt="eraser icon" class="tool__eraser" data-tooltip-keyboard-shortcut="Eraser (E)">
+                    <img src="./images/undo.svg" alt="undo icon" class="tool__undo" data-tooltip-keyboard-shortcut="Undo (Ctrl + Z)">
+                    <div class="tool__spacing-dot"></div>
+                    <!-- will be the shape of a concentric circle but the inner circle is filled with the color that the user picked or default (Black) color  -->
+                    <div class="tool__color-palette">
+                        <div class="tool__current-color"></div>
+                    </div>
+                </div>
+
+                <div class="tool__buttons">
+                    <button class="tool__button tool__button--dark-mode tool__button--responsive">Help</button> 
+                    <button class="tool__button tool__button--dark-mode tool__button--responsive">Feedback</button> 
+                </div>
+            </nav>
+
+
+        </div>
         
     </body>
 </html>
