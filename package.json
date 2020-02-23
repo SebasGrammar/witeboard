@@ -1,0 +1,33 @@
+{
+	"name": "witeboard",
+	"version": "1.0.0",
+	"description": "Real-time online whiteboard",
+	"main": "index.js",
+	"scripts": {
+		"webpack": "webpack",
+		"start:dev": "webpack-dev-server",
+		"generate-docs": "jsdoc -c ./jsdocs.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/anthonygedeon/witeboard.git"
+	},
+	"author": "Anthony Gedeon",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/anthonygedeon/witeboard/issues"
+	},
+	"homepage": "https://github.com/anthonygedeon/witeboard#readme",
+	"devDependencies": {
+		"@babel/core": "^7.8.4",
+		"@babel/preset-env": "^7.8.4",
+		"babel-loader": "^8.0.6",
+		"file-loader": "^5.1.0",
+		"html-loader": "^0.5.5",
+		"html-webpack-plugin": "^3.2.0",
+		"jsdoc": "^3.6.3",
+		"webpack": "^4.41.6",
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.10.3"
+	}
+}
